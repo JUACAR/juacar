@@ -1,0 +1,286 @@
+/*Menu y titulo*/
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background: #FFDB58;
+    box-shadow: 1px 1px 7px black;
+}
+
+a{
+
+text-decoration: none;
+}
+
+header .logo {
+    color: #e51a1a;
+    height: 50px;
+    line-height: 50px;
+    font-size: 23px;
+    float: left;
+    font-weight: bold;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    list-style: none;
+    position: relative;
+
+}
+
+header nav ul li.sub-menu:before {
+    content: '\f078';
+    font-family: fontAwesome;
+    position: absolute;
+    line-height: 50px;
+    color: #e51a1a;
+    right: 1px;
+}
+
+header nav ul li.active.sub-menu:before {
+    content: '\f077';
+
+}
+
+header nav ul li ul {
+    position: absolute;
+    left: 0;
+    background: #FFDB58;
+    display: none;
+    box-shadow: 1px 1px 7px black;
+
+}
+
+header nav ul li.active ul {
+    /* use li: hover instead */
+    display: block;
+}
+
+header nav ul li ul li {
+    display: block;
+    width: 235px;
+}
+
+header nav ul li a {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: #e51a1a;
+    text-decoration: none;
+    display: block;
+}
+
+header nav ul li a:hover {
+    color: #fff;
+    background: #e51a1a;
+}
+
+
+.menu-toggle {
+    color: #e51a1a;
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none
+}
+
+
+
+/*Pie de pagina*/
+footer {    
+    font-family: sans-serif;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.678), rgba(98, 97, 97, 0.637)),url("https://static.wixstatic.com/media/509653_deb30ad7b7cd44fcb2e44546c16c4198~mv2_d_6000_4000_s_4_2.jpg/v1/fill/w_885,h_590,al_c,q_90,usm_0.66_1.00_0.01/509653_deb30ad7b7cd44fcb2e44546c16c4198~mv2_d_6000_4000_s_4_2.webp");
+    color: #fff;
+}
+
+.contenedor-todo {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+}
+
+.contenedor9 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagina {
+    max-width: 400px;
+}
+
+.pagina h1 {
+
+    font-size: 22px;
+}
+
+.pagina p {
+    font-size: 14px;
+    color: #c7c7c7;
+    margin-top: 20px;
+}
+
+.redes {
+    max-width: 400px;
+}
+
+.redes h1 {
+    font-size: 22px;
+}
+
+.fila {
+    margin-top: 20px;
+    display: flex;
+}
+
+.fila img {
+    width: 36px;
+    height: 36px;
+}
+
+.fila label {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #c7c7c7;
+    cursor: pointer;
+}
+
+.informacion {
+    max-width: 400px;
+
+}
+
+.informacion h1 {
+    font-size: 22px;
+}
+
+.fila2 {
+    margin-top: 20px;
+    display: flex;
+}
+
+.fila2 img {
+    width: 36px;
+    height: 36px;
+
+}
+
+.fila2 label {
+    margin-top: 10px;
+    margin-left: 20px;
+    max-width: 240px;
+}
+
+.contenedor-footer {
+    width: 100%;
+    background: #101010be;
+
+}
+
+.footer {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.copy p {
+    color: #c7c7c7;
+    text-align: center;
+}
+
+
+@media (max-width: 860px) {
+    header {
+      padding: 0px 20px;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    header nav {
+  
+      position: absolute;
+      top: 50px;
+      left: -100%;
+      width: 100%;
+      height: calc(100vh - 50px);
+      background: #FFDB58;
+      transition: 0.5s;
+    }
+  
+    header nav.active {
+      left: 0;
+    }
+  
+  
+    .texto-team>h4 {
+      color: #e51a1a;
+  
+    }
+  
+    .texto-team>h6 {
+      display: none;
+    }
+  
+  
+    header nav ul {
+      display: block;
+      text-align: center;
+    }
+  
+    header nav ul li a {
+      border-bottom: 0.9px solid #FFDB58;
+    }
+  
+    header nav ul li.active ul {
+      position: relative;
+      background: #FFDB58;
+    }
+  
+  
+    header nav ul li ul li {
+      width: 100%;
+    }
+    footer {
+        background-attachment: fixed;
+    }
+  
+  }
+
+  
+@media (max-width: 1000px) {
+
+
+
+    .contenedor9 {
+      flex-wrap: wrap;
+    }
+  
+    .redes,
+    .informacion {
+      margin-top: 40px;
+    }
+  
+  
+   
+  
+  }

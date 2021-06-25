@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "gallery-lightbox";
+  src:url("../fonts/gallery-lightbox.eot");
+  src:url("../fonts/gallery-lightbox.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/gallery-lightbox.woff") format("woff"),
+    url("../fonts/gallery-lightbox.ttf") format("truetype"),
+    url("../fonts/gallery-lightbox.svg#gallery-lightbox") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "gallery-lightbox" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "gallery-lightbox" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-expand:before {
+  content: "\61";
+}
+.icon-next:before {
+  content: "\62";
+}
+.icon-back:before {
+  content: "\63";
+}
+.icon-close:before {
+  content: "\64";
+}
+
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.root {
+    padding: 15px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 5px 5px;
+    font-size: 16px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery__item {
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery__img {
+    display: block;
+    max-width: 100%;
+}
+
+.gallery__item:before, .gallery__item:after {
+    position: absolute;
+    transition: all .2s;
+}
+
+.gallery__item:before {
+    color: #fff;
+    font-size: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.gallery__item:hover:before {
+    font-size: 1.5rem;
+}
+
+.gallery__item:after {
+    display: block;
+    content: '';
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    background-color: rgba(0 ,0 , 0, .4);
+    z-index: 1;
+}
+
+.gallery__item:hover:after {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.gallery__item:after, .gallery__item, .gallery__img {
+    border-radius: 5px;
+}
+
+.gallery-lightbox {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0 ,0 , 0, .8);
+    font-size: 16px;
+    padding: 0 15px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.gallery-lightbox.show {
+    display: flex;
+}
+
+.gallery-lightbox__modal {
+    position: relative;
+    background-color: #fff;
+    padding: 5px;
+    max-width: 650px;
+    border-radius: 5px;
+}
+
+.gallery-lightbox__img {
+    display: block;
+    width: 100%;
+}
+
+.gallery-lightbox__control {
+    position: absolute;
+    cursor: pointer;
+}
+
+.gallery-lightbox__control:before {
+    display: block;
+}
+
+.gallery-lightbox__control.icon-close {
+    top: -14px;
+    right: -14px;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    font-size: .8rem;
+}
+
+.gallery-lightbox__control.icon-back, .gallery-lightbox__control.icon-next {
+    top: 50%;
+    font-size: 2rem;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.gallery-lightbox__control.icon-back {
+    left: 10px;
+}
+
+.gallery-lightbox__control.icon-next {
+    right: 10px;
+}
+
+@media screen and (min-width: 576px) {
+    .gallery {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(3, auto);
+    }
+
+    .gallery-lightbox__control.icon-close {
+        top: -19px;
+        right: -19px;
+        font-size: 1.2rem;
+    }
+
+    .gallery-lightbox__control.icon-back, .gallery-lightbox__control.icon-next {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .gallery {
+        grid-template-columns: repeat(4, auto);
+    }
+}

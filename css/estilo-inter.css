@@ -1,0 +1,137 @@
+/*Quitar margenes*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body {
+    font-family: verdana;
+    background-attachment: fixed;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+  
+
+.container {
+    margin: auto;
+    width: 50%;
+    background-position: center;
+}
+
+/*Main*/
+
+.titulo-encabezado{
+    width: 100%;
+    height: 400px;
+    background:  url("https://static.wixstatic.com/media/509653_7e4722c817f84be9813f2f46d7d6d01b~mv2_d_4581_2530_s_4_2.jpg/v1/fill/w_912,h_504,al_c,q_90,usm_0.66_1.00_0.01/509653_7e4722c817f84be9813f2f46d7d6d01b~mv2_d_4581_2530_s_4_2.webp");
+    background-size: cover;
+    text-shadow: /*El eje de la x*/ 1px /*El eje de la y*/ 1px /*Difuminado*/ 2px /*Color de la sombra*/ rgba(0, 0, 0, 0.8);
+
+}
+
+.titulo-encabezado h1{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    overflow: hidden;
+    font-family: verdana;
+    font-size: 40px;
+}
+
+
+/*Proyectos*/
+
+/*Contenedor*/
+.contenedor{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.primer-grande{
+    background-image: url("https://i.ibb.co/s6sgHwP/XXIII-FESITINERANTE-2.jpg");
+    background-size: cover;
+    margin-top: 100px;
+    width: 100%;
+    height: 700px;
+    box-shadow: 1px 1px 10px black;
+
+}
+
+.primer-grande h1{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    color: #fff;
+    overflow: hidden;
+    font-family: verdana;
+    text-shadow: /*El eje de la x*/ 1px /*El eje de la y*/ 1px /*Difuminado*/ 2px /*Color de la sombra*/ rgba(0, 0, 0, 0.8);
+
+}
+
+
+
+.pg1{
+    color: transparent;
+}
+
+.segundo-grande{
+    background: url("https://i.ibb.co/zhD3G7F/Festival-infantil-de-danza.jpg");
+    background-size: cover;
+    margin-top: 100px;
+    width: 100%;
+    height: 700px;
+    box-shadow: 1px 1px 10px black;
+}
+
+.segundo-grande h1{
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-family: verdana;
+    text-shadow: /*El eje de la x*/ 1px /*El eje de la y*/ 1px /*Difuminado*/ 2px /*Color de la sombra*/ rgba(0, 0, 0, 0.8);
+
+}
+
+
+
+
+@media (max-width: 860px) {
+   
+    .primer-grande{
+
+        height: 50vh;
+    
+    
+    }
+
+    .segundo-grande{
+       
+        height: 50vh;
+    }
+
+     h1{
+        font-size: 17px;
+    }
+
+    .section-title {
+        font-size: 27px;
+        font-weight: 280;
+        font-family: verdana;
+    }
+}
+

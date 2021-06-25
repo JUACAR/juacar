@@ -1,0 +1,398 @@
+/*Quitar margenes*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Darle la forma que lleva el body del index.html*/
+a{
+  text-decoration: none;
+}
+body {
+  font-family: verdana;
+  background: #f2f2f2;
+  background: url(../img/geometry2.png);
+
+}
+
+
+
+/*Imagen de Bienvenida de la pagina index */
+.bienvenida {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://i.ibb.co/sv6tT6w/Danza-Juacar-Infantil.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+
+}
+
+.titulo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #d8d2d2;
+  overflow: hidden;
+  font-family: verdana;
+}
+
+.titulo>p {
+
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    overflow: hidden;
+    font-family: verdana;
+    text-shadow: /*El eje de la x*/ 1px /*El eje de la y*/ 1px /*Difuminado*/ 2px /*Color de la sombra*/ rgba(0, 0, 0);
+}
+
+/*Slider*/
+.slider{
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider ul{
+
+  display: flex;
+  padding: 10px;
+  width: 400%;
+  height: 100px;
+  margin-bottom: 100px;
+  animation: cambio 20s infinite;
+  box-shadow: 1px 1px 10px black;
+}
+hr{
+  box-shadow: 1px 1px 10px black;
+}
+.imag{
+  display: flex;
+  padding: 5px;
+}
+.slider li{
+  width: 100%;
+
+  list-style: none;
+}
+
+.slider img{
+  width: 50%;
+}
+
+@keyframes cambio{
+  0%{ 
+    margin-left: 0;
+
+  }15%{ 
+
+    margin-left: -50; 
+
+  }30%{
+
+    margin-left: -100%;
+
+  }45%{
+
+    margin-left: -150%;
+
+  }60%{
+
+    margin-left: -200%;
+  
+  }75%{
+    
+    margin-left: -250%;
+  
+  }85%{
+
+    margin-left: -300%;
+
+  }100%{
+
+    margin-left: 0%;
+
+  }
+
+}
+
+
+/*Contenido de la pagina index*/
+.contenido-padre {
+  margin: auto;
+  text-align: center;
+
+}
+
+
+.contenido {
+  width: 80%;
+  margin: auto;
+}
+
+.contenido>p {
+  width: 100%;
+  text-align: center;
+}
+
+.contenido .video-padre {
+  margin: auto;
+  width: 100%;
+}
+
+.video{
+  box-shadow: 1px 1px 10px black;
+
+}
+
+.textos-ritmo {
+  font-family: Anton;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #e51a1a;
+  text-shadow: /*El eje de la x*/ 1px /*El eje de la y*/ 1px /*Difuminado*/ 2px /*Color de la sombra*/ rgba(0, 0, 0, 0.746);
+}
+
+
+
+.textositmo {
+  font-family: Anton;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #3c3c3c;
+  text-shadow: /*El eje de la x*/ 1px /*El eje de la y*/ 1px /*Difuminado*/ 2px /*Color de la sombra*/ rgba(0, 0, 0, 0.746);
+
+}
+
+.read-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.read-more>a  {
+  width: 200px;
+  height: 50px;
+  background: transparent;
+  color: transparent;
+  font-size: center;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+  border: 1px solid #d8d2d2;
+  border-radius: 999px;
+  padding: 12px;
+ 
+}
+
+.read-more >a>p{
+  color: #d8d2d2;
+}
+
+.read-more >a:hover p{
+  color: #3c3c3c;
+}
+
+.read-more>a:hover {
+  background: #d8d2d2;
+  color: transparent;
+  border: 1px solid transparent;
+}
+
+.textos-contenido {
+  margin: auto;
+  width: 85%;
+  height: 200px;
+  text-align: justify;
+  font-family: Arial;
+  text-align: left;
+}
+
+/*Contenedor de un resumen de lineas de accion*/
+.lineas {
+  width: 100%;
+  height: 500px;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.828), rgba(98, 97, 97, 0.733)), url("https://i.ibb.co/JRpkGzG/ni-as-juacar.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 1px 1px 10px black;
+
+}
+
+.lineas-titulo {
+  font-family: Arial;
+  font-size: 30px;
+  font-weight: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #f2f2f2;
+  text-align: center;
+  text-shadow: /*El eje de la x*/ 1px /*El eje de la y*/ 1px /*Difuminado*/ 2px /*Color de la sombra*/ rgba(0, 0, 0, 0.746);
+
+}
+
+.lineas-contenido {
+  width: 80%;
+  text-align: center;
+  font-family: Arial;
+  color: #f2f2f2;
+}
+
+/*Imagenes*/
+
+.contenedor-img {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+
+}
+
+.imgs {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.people1 img {
+  width: 375px;
+  height: 375px;
+  box-shadow: 1px 1px 10px black;
+
+}
+
+.people2 img {
+  width: 375px;
+  height: 375px;
+  box-shadow: 1px 1px 10px black;
+
+}
+
+.people3 img {
+  width: 375px;
+  height: 375px;
+  box-shadow: 1px 1px 10px black;
+
+}
+
+
+
+
+
+
+@media (max-width: 860px) {
+
+
+  /*Imagen de Bienvenida de la pagina index */
+  .bienvenida {
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+  }
+
+  .titulo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #d8d2d2;
+    overflow: hidden;
+    font-family: verdana;
+  }
+
+
+  /*Contenido de la pagina index*/
+  .contenido-padre {
+    margin: auto;
+    text-align: center;
+  }
+
+
+  .contenido {
+    width: 80%;
+    margin: auto;
+  }
+
+  .contenido>p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contenido .video-padre {
+    margin: auto;
+    width: 60%;
+  }
+
+  .video {
+    display: block;
+    margin-top: 10px;
+    height: 20%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 1200px) {
+
+
+  /*Imagenes*/
+
+  .contenedor-img {
+    width: 375px;
+    height: 50%;
+
+  }
+
+  .imgs {
+    display: block;
+
+  }
+
+  .people1 img {
+    width: 375px;
+    height: 375px;
+
+
+  }
+
+  .people2 img {
+    width: 375px;
+    height: 375px;
+
+  }
+
+  .people3 img {
+    width: 375px;
+    height: 375px;
+
+  }
+
+}

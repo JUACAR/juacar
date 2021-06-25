@@ -1,0 +1,72 @@
+/*Quitar margenes*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*Darle forma al body de contactanos*/
+body {
+    font-family: verdana;
+    background-attachment: fixed;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background: url(../img/geometry2.png);
+}
+
+main{
+    width: 80%;
+    margin: auto;
+  }
+
+
+.contenido{
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 22px;
+    
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.contenido img{
+    width: 100%;
+    box-shadow: 1px 1px 10px black;
+}
+
+/*Main*/
+
+.nuestra-historia{
+    margin-top: 100px;
+    text-align: left;
+
+}
+
+.nuestra-historia h1{
+    text-align: center;
+    color: #e51a1a;
+    text-shadow: /*El eje de la x*/ 1px /*El eje de la y*/ 1px /*Difuminado*/ 2px /*Color de la sombra*/ rgba(0, 0, 0);
+}
+
+
+@media (max-width: 860px) {
+
+    .section-title {
+        font-size: 30px;
+        font-weight: 280;
+        font-family: verdana;
+    }
+}
+
+@media (max-width: 400px){
+    .contenido img{
+        height: 200px;
+        width: 200px;
+    }
+    
+}
