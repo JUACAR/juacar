@@ -40,15 +40,19 @@
 
 .icon-expand:before {
   content: "\61";
+  z-index: 10000001;
 }
 .icon-next:before {
   content: "\62";
+  z-index: 10000001;
 }
 .icon-back:before {
   content: "\63";
+  z-index: 10000001;
 }
 .icon-close:before {
   content: "\64";
+  z-index: 10000001;
 }
 
 
@@ -69,6 +73,12 @@
     font-size: 16px;
     max-width: 1200px;
     margin: auto;
+}
+
+.gallery_text_banner {
+    background-color: #3d3d3d;
+    color: white;
+    border-radius: 0px 0px 4px 4px;
 }
 
 .gallery__item {
@@ -205,6 +215,7 @@
 
     .gallery-lightbox__control.icon-back, .gallery-lightbox__control.icon-next {
         font-size: 3rem;
+        z-index: 1000001;
     }
 }
 
