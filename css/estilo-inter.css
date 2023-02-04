@@ -108,6 +108,31 @@ body {
 }
 
 
+.pg1{
+    color: transparent;
+}
+
+.tercer-grande{
+    background: url("../img/juacar-2022/festival/23.png");
+    background-size: cover;
+    margin-top: 100px;
+    width: 100%;
+    height: 700px;
+    box-shadow: 1px 1px 10px black;
+}
+
+.tercer-grande h1{
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-family: verdana;
+    text-shadow: /*El eje de la x*/ 1px /*El eje de la y*/ 1px /*Difuminado*/ 2px /*Color de la sombra*/ rgba(0, 0, 0, 0.8);
+
+}
+
+
+
+
 
 
 @media (max-width: 860px) {

@@ -161,6 +161,8 @@
 .gallery-lightbox__img {
     display: block;
     width: 100%;
+    height: 20rem;
+    object-fit: cover;
 }
 
 .gallery-lightbox__control {
