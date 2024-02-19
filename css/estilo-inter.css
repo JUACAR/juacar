@@ -62,7 +62,7 @@ body {
 
 
 .infantil-2023{
-    background-image: url("../img/juacar-2023/talleres/taller_001/cover.jpeg");
+    background-image: url("https://raw.githubusercontent.com/JUACAR/juacar/main/img/juacar-2023/talleres/cover.jpeg");
     background-size: cover;
     margin-top: 100px;
     width: 100%;
