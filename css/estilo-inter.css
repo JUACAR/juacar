@@ -60,6 +60,69 @@ body {
     text-align: center;
 }
 
+
+.infantil-2023{
+    background-image: url("../img/juacar-2023/talleres/taller_001/cover.jpeg");
+    background-size: cover;
+    margin-top: 100px;
+    width: 100%;
+    height: 700px;
+    box-shadow: 1px 1px 10px black;
+
+}
+
+.infantil-2023 h1{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    color: #fff;
+    overflow: hidden;
+    font-family: verdana;
+    text-shadow: /*El eje de la x*/ 1px /*El eje de la y*/ 1px /*Difuminado*/ 2px /*Color de la sombra*/ rgba(0, 0, 0, 0.8);
+
+}
+
+
+
+.pg1{
+    color: transparent;
+}
+
+
+
+.directora-2023{
+    background-image: url("../img/juacar-2023/directora/img_003.jpg");
+    background-size: cover;
+    margin-top: 100px;
+    width: 100%;
+    height: 700px;
+    box-shadow: 1px 1px 10px black;
+
+}
+
+.directora-2023 h1{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    color: #fff;
+    overflow: hidden;
+    font-family: verdana;
+    text-shadow: /*El eje de la x*/ 1px /*El eje de la y*/ 1px /*Difuminado*/ 2px /*Color de la sombra*/ rgba(0, 0, 0, 0.8);
+
+}
+
+
+
+.pg1{
+    color: transparent;
+}
+
+
+
 .primer-grande{
     background-image: url("https://i.ibb.co/s6sgHwP/XXIII-FESITINERANTE-2.jpg");
     background-size: cover;
