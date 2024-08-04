@@ -20,9 +20,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
-    /* ... (estilos anteriores sin cambios) ... */
-
-    /* Estilos para el nuevo carousel de Bootstrap */
+    /* Estilos generales para el carousel */
     .carousel-inner {
       border-radius: 8px;
     }
@@ -35,16 +33,14 @@
       width: 100%;
       height: 400px;
       display: flex;
-      justify-content: center ;
+      justify-content: center;
       overflow: hidden;
     }
-
 
     .iframe-container img {
       height: 100%;
       object-fit: cover;
     }
-    
 
     .carousel-item iframe {
       width: 100%;
@@ -67,32 +63,28 @@
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
     }
-    
+
     .titulo-content {
       padding: 2rem;
       max-width: 800px;
       margin-bottom: 2rem;
       text-align: center;
-      width: 45% !important; 
+      width: 45% !important;
       background-color: rgb(177, 177, 177, .9);
-      text-shadow: 4px 4px 12px rgba(0,0,0,0.6);
-
+      text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6);
     }
-    
+
     .titulo-content h2 {
       font-size: 2.5rem;
       color: #fafafa;
       margin-bottom: 1rem;
     }
-    
+
     .titulo-content p {
       font-size: 1rem;
       line-height: 1.6;
       color: #fafafa;
-
     }
-    
-
 
     .wrapper {
         max-width: 1100px;
@@ -101,133 +93,125 @@
     }
 
     .wrapper i {
-        height: 50px;
-        width: 50px;
-        background: #E51A1A;
-        text-align: center;
-        line-height: 50px;
-        border-radius: 50%;
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        font-size: 1.25rem;
-        transform: translateY(-50%);
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
-        z-index: 100;
+      height: 50px;
+      width: 50px;
+      background: #E51A1A;
+      text-align: center;
+      line-height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      font-size: 1.25rem;
+      transform: translateY(-50%);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+      z-index: 100;
     }
 
     .wrapper i:first-child {
-        left: -22px;
+      left: -22px;
     }
 
     .wrapper i:last-child {
-        right: -22px;
+      right: -22px;
     }
 
     .wrapper .carousel {
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: calc((100% / 3) - 12px);
-        gap: 16px;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        scrollbar-width: 0;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: calc((100% / 3) - 12px);
+      gap: 16px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scrollbar-width: 0;
     }
 
     .carousel::-webkit-scrollbar {
-        display: none;
+      display: none;
     }
 
     .carousel .card {
-        scroll-snap-align: start;
-        height: 450px;
-        list-style: none;
-        background: #fff;
-        border-radius: 8px;
-        display: flex;
-        cursor: pointer;
-        padding-bottom: 15px;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+      scroll-snap-align: start;
+      height: 450px;
+      list-style: none;
+      background: #fff;
+      border-radius: 8px;
+      display: flex;
+      cursor: pointer;
+      padding-bottom: 15px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
     }
 
     .card iframe {
-        width: 100%;
-        height: 380px;
-        border: none;
+      width: 100%;
+      height: 380px;
+      border: none;
     }
 
     .card .card-body {
-        padding: 10px;
-        text-align: center;
+      padding: 10px;
+      text-align: center;
     }
 
     .card-body {
       color: #000;
-    } 
+    }
 
-    @media screen and (max-width: 900px) {
-        .wrapper .carousel {
-            grid-auto-columns: calc((100% / 2) - 9px);
-        }
-        
-        .titulo {
-          display: flex;
-          flex-direction: column;
-        }
-
-        .titulo-content {
-          width: 100% !important; 
-        }
-
-        .wrapper {
-          max-width: 1100px;
-          width: 100%;
-          position: relative;
+    @media screen and (max-width: 1200px) {
+      .wrapper .carousel {
+        grid-auto-columns: calc(50% - 8px);
       }
-        
+
+      .titulo {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      .titulo-content {
+        width: 100% !important;
+      }
+
+      .wrapper {
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+      }
     }
 
     @media screen and (max-width: 600px) {
-        .wrapper .carousel {
-            grid-auto-columns: 100%;
-        }
-        .titulo {
-          display: flex;
-          flex-direction: column;
-        }
-            
-        .wrapper {
-            max-width: 1100px;
-            width: 100%;
-            position: relative;
-        }
+      .wrapper .carousel {
+        grid-auto-columns: 100%;
+      }
+
+      .titulo {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .wrapper {
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+      }
     }
 
-    /* Estilos adicionales para el slider infinito */
-    .wrapper .carousel{
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: calc((100% / 3) - 12px);
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        gap: 16px;
-        border-radius: 8px;
-        scroll-behavior: smooth;
-        scrollbar-width: none;
-    }
     .carousel.no-transition {
-        scroll-behavior: auto;
+      scroll-behavior: auto;
     }
+
     .carousel.dragging {
-        scroll-snap-type: none;
-        scroll-behavior: auto;
+      scroll-snap-type: none;
+      scroll-behavior: auto;
     }
+
     .carousel.dragging .card {
-        cursor: grab;
-        user-select: none;
+      cursor: grab;
+      user-select: none;
     }
   </style>
 </head>
