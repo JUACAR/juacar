@@ -4,6 +4,7 @@ header {
     top: 0;
     left: 0;
     padding: 0px 20px;
+    z-index: 999;
     width: 100%;
     box-sizing: border-box;
     background: #FFDB58;
