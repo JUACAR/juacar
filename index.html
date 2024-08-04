@@ -16,6 +16,220 @@
   <link rel="shortcut icon" href="img/danza.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="google-site-verification" content="0aMeurfSzw-XaC8Ch-YJuqTlVsp9fyt53p3bB4qv40A" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* ... (estilos anteriores sin cambios) ... */
+
+    /* Estilos para el nuevo carousel de Bootstrap */
+    .carousel-inner {
+      border-radius: 8px;
+    }
+
+    .carousel-item {
+      height: 450px;
+    }
+
+    .iframe-container {
+      width: 100%;
+      height: 400px;
+      display: flex;
+      justify-content: center ;
+      overflow: hidden;
+    }
+
+
+    .iframe-container img {
+      height: 100%;
+      object-fit: cover;
+    }
+    
+
+    .carousel-item iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    .titulo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    }
+    
+    .titulo-content {
+      padding: 2rem;
+      max-width: 800px;
+      margin-bottom: 2rem;
+      text-align: center;
+      width: 45% !important; 
+      background-color: rgb(177, 177, 177, .9);
+      text-shadow: 4px 4px 12px rgba(0,0,0,0.6);
+
+    }
+    
+    .titulo-content h2 {
+      font-size: 2.5rem;
+      color: #fafafa;
+      margin-bottom: 1rem;
+    }
+    
+    .titulo-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #fafafa;
+
+    }
+    
+
+
+    .wrapper {
+        max-width: 1100px;
+        width: 50%;
+        position: relative;
+    }
+
+    .wrapper i {
+        height: 50px;
+        width: 50px;
+        background: #E51A1A;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        font-size: 1.25rem;
+        transform: translateY(-50%);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+        z-index: 100;
+    }
+
+    .wrapper i:first-child {
+        left: -22px;
+    }
+
+    .wrapper i:last-child {
+        right: -22px;
+    }
+
+    .wrapper .carousel {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% / 3) - 12px);
+        gap: 16px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: 0;
+    }
+
+    .carousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    .carousel .card {
+        scroll-snap-align: start;
+        height: 450px;
+        list-style: none;
+        background: #fff;
+        border-radius: 8px;
+        display: flex;
+        cursor: pointer;
+        padding-bottom: 15px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .card iframe {
+        width: 100%;
+        height: 380px;
+        border: none;
+    }
+
+    .card .card-body {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .card-body {
+      color: #000;
+    } 
+
+    @media screen and (max-width: 900px) {
+        .wrapper .carousel {
+            grid-auto-columns: calc((100% / 2) - 9px);
+        }
+        
+        .titulo {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .titulo-content {
+          width: 100% !important; 
+        }
+
+        .wrapper {
+          max-width: 1100px;
+          width: 100%;
+          position: relative;
+      }
+        
+    }
+
+    @media screen and (max-width: 600px) {
+        .wrapper .carousel {
+            grid-auto-columns: 100%;
+        }
+        .titulo {
+          display: flex;
+          flex-direction: column;
+        }
+            
+        .wrapper {
+            max-width: 1100px;
+            width: 100%;
+            position: relative;
+        }
+    }
+
+    /* Estilos adicionales para el slider infinito */
+    .wrapper .carousel{
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% / 3) - 12px);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        border-radius: 8px;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+    .carousel.no-transition {
+        scroll-behavior: auto;
+    }
+    .carousel.dragging {
+        scroll-snap-type: none;
+        scroll-behavior: auto;
+    }
+    .carousel.dragging .card {
+        cursor: grab;
+        user-select: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -54,15 +268,43 @@
 
 
 
-  <!--Imagen y titulo-->
+  <!--Imagen y título-->
   <div class="bienvenida">
     <div class="titulo">
-     
-
-<!-- <p>La Escuela Está <br/> Cerrada Por Pandemia </p> -->
-
+      <div class="titulo-content">
+        <h2>Danza Juacar en Bogotá 2024</h2>
+        <p>Este año 2024, la docente especialista en pedagogía del folclor, Licenciada Carmen Ileidis Ibarra Campo, se trasladó desde La Guajira a Bogotá, atendiendo la invitación de la compañía Danza Libre de Bogotá. La invitación fue para acompañar en los montajes "Cantar de Negros", interpretando El Bullerengue, El Mapale, La Muletilla y El Temandumba. Además, participó en Chachachá y Salsa, acompañando también en la interpretación de La Yonna, La Pola y otros temas en el montaje alusivo a Venezuela, como parte del Festival Internacional de Comalcalco.</p>
+      </div>
+      <!-- Carrusel Infinito -->
+      <div class="wrapper">
+        <i id="left" class="fas fa-angle-left"></i>
+        <ul class="carousel">
+          <!-- Los items del carrusel se generarán dinámicamente con JavaScript -->
+        </ul>
+        <i id="right" class="fas fa-angle-right"></i>
+      </div>
+    </div>
+    <!-- Carrusel de Bootstrap -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <!-- Indicadores generados dinámicamente con JavaScript -->
+      </div>
+      <div class="carousel-inner">
+        <!-- Items del carrusel generados dinámicamente con JavaScript -->
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
     </div>
   </div>
+
+
+
   <main class="contenedor">
 
     <!--Slider de novedades-->
@@ -102,9 +344,9 @@
 
         PRINCIPIO DE BALLET Y DANZA CONTEMPORÁNEA, ORGANIZACIÓN Y MONTAJES DE COREOGRAFÍAS.
       </p>
-      <div class="read-more"><a href="html/juacar.html">
+      <!-- <div class="read-more"><a href="html/juacar.html">
           <p>MÁS INFORMACIÓN</p>
-        </a></div>
+        </a></div> -->
     </div>
     <br />
     <div class="contenedor-img">
@@ -237,6 +479,242 @@
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+
+  <script>
+    const carouselItems = [
+      {src: "https://www.instagram.com/reel/C9p6mz5pw8_/embed", text: ""},
+      {src: "https://www.instagram.com/reel/C92Zcg5J33x/embed", text: ""},
+      {src: "https://www.instagram.com/reel/C-C1Mk_Jmi3/embed", text: ""},
+      {src: "https://www.instagram.com/reel/C66bjBGOfET/embed", text: ""},
+      {src: "https://www.instagram.com/reel/C632AZqO-Ya/embed", text: ""},
+      {src: "https://www.instagram.com/reel/C4wPAnWuzWy/embed", text: ""},
+      {src: "https://www.instagram.com/reel/C-Igpiouuto/embed", text: ""},
+      {src: "https://www.instagram.com/reel/CmDI_VPjaMS/embed", text: ""},
+      {src: "https://www.instagram.com/reel/C-LwTjNu1eb/embed", text: ""},
+      {src: "https://www.instagram.com/reel/C9YTqxTpUwD/embed", text: ""},
+      {src: "https://www.instagram.com/reel/C8Npa_ZJywg/embed", text: ""},
+      {src: "https://www.instagram.com/reel/C9JmV30s8X2/embed", text: ""},
+      {src: "https://www.instagram.com/reel/C66bjBGOfET/embed", text: ""},
+      {src: "https://www.instagram.com/p/C9cvSn8J4w5/embed", text: ""}
+    ];
+
+    const carouselItems2 = [
+      {src: './img/juacar-2024/juacar_47.jpg', text: 'juacar_47'},
+      {src: './img/juacar-2024/juacar_56.jpg', text: 'juacar_56'},
+      {src: './img/juacar-2024/juacar_53.jpg', text: 'juacar_53'},
+      {src: './img/juacar-2024/juacar_3.jpg', text: 'juacar_3'},
+      {src: './img/juacar-2024/juacar_2.jpg', text: 'juacar_2'},
+      {src: './img/juacar-2024/juacar_23.jpg', text: 'juacar_23'},
+      {src: './img/juacar-2024/juacar_32.jpg', text: 'juacar_32'},
+      {src: './img/juacar-2024/juacar_33.jpg', text: 'juacar_33'},
+      {src: './img/juacar-2024/juacar_34.jpg', text: 'juacar_34'},
+      {src: './img/juacar-2024/juacar_35.jpg', text: 'juacar_35'},
+      {src: './img/juacar-2024/juacar_37.jpg', text: 'juacar_37'},
+      {src: './img/juacar-2024/juacar_39.jpg', text: 'juacar_39'},
+      {src: './img/juacar-2024/juacar_4.jpg', text: 'juacar_4'},
+      //{src: './img/juacar-2024/juacar_40.jpg', text: 'juacar_40'},
+      //{src: './img/juacar-2024/juacar_41.jpg', text: 'juacar_41'},
+      {src: './img/juacar-2024/juacar_42.jpg', text: 'juacar_42'},
+      {src: './img/juacar-2024/juacar_43.jpg', text: 'juacar_43'},
+      //{src: './img/juacar-2024/juacar_44.jpg', text: 'juacar_44'},
+      {src: './img/juacar-2024/juacar_45.jpg', text: 'juacar_45'},
+      //{src: './img/juacar-2024/juacar_46.jpg', text: 'juacar_46'},
+      {src: './img/juacar-2024/juacar_49.jpg', text: 'juacar_49'},
+      {src: './img/juacar-2024/juacar_5.jpg', text: 'juacar_5'},
+      {src: './img/juacar-2024/juacar_50.jpg', text: 'juacar_50'},
+      {src: './img/juacar-2024/juacar_51.jpg', text: 'juacar_51'},
+      {src: './img/juacar-2024/juacar_52.jpg', text: 'juacar_52'},
+      {src: './img/juacar-2024/juacar_54.jpg', text: 'juacar_54'},
+      {src: './img/juacar-2024/juacar_55.jpg', text: 'juacar_55'},
+      {src: './img/juacar-2024/juacar_57.jpg', text: 'juacar_57'},
+      {src: './img/juacar-2024/juacar_58.jpg', text: 'juacar_58'},
+      {src: './img/juacar-2024/juacar_6.jpg', text: 'juacar_6'},
+      {src: './img/juacar-2024/juacar_7.jpg', text: 'juacar_7'},
+      {src: './img/juacar-2024/juacar_8.jpg', text: 'juacar_8'},
+      {src: './img/juacar-2024/juacar_9.jpg', text: 'juacar_9'}
+      /*
+      {src: './img/juacar-2024/juacar_38.jpg', text: 'juacar_38'},
+      {src: './img/juacar-2024/juacar_26.jpg', text: 'juacar_26'},
+      {src: './img/juacar-2024/juacar_10.jpg', text: 'juacar_10'},
+      {src: './img/juacar-2024/juacar_11.jpg', text: 'juacar_11'},
+      {src: './img/juacar-2024/juacar_13.jpg', text: 'juacar_13'},
+      {src: './img/juacar-2024/juacar_14.jpg', text: 'juacar_14'},
+      {src: './img/juacar-2024/juacar_15.jpg', text: 'juacar_15'},
+      {src: './img/juacar-2024/juacar_16.jpg', text: 'juacar_16'},
+      {src: './img/juacar-2024/juacar_17.jpg', text: 'juacar_17'},
+      {src: './img/juacar-2024/juacar_18.jpg', text: 'juacar_18'},
+      {src: './img/juacar-2024/juacar_19.jpg', text: 'juacar_19'},
+      {src: './img/juacar-2024/juacar_20.jpg', text: 'juacar_20'},
+      {src: './img/juacar-2024/juacar_21.jpg', text: 'juacar_21'},
+      {src: './img/juacar-2024/juacar_22.jpg', text: 'juacar_22'},
+      {src: './img/juacar-2024/juacar_25.jpg', text: 'juacar_25'},
+      {src: './img/juacar-2024/juacar_27.jpg', text: 'juacar_27'},
+      {src: './img/juacar-2024/juacar_28.jpg', text: 'juacar_28'},
+      {src: './img/juacar-2024/juacar_29.jpg', text: 'juacar_29'},
+      {src: './img/juacar-2024/juacar_30.jpg', text: 'juacar_30'},
+      {src: './img/juacar-2024/juacar_31.jpg', text: 'juacar_31'},
+      */
+    ];
+
+    function createInfiniteCarouselItem(src, text) {
+      return `
+        <li class="card">
+          <div class="iframe-container" data-src="${src}">
+            <!-- Placeholder content -->
+          </div>
+          <div class="card-body">
+            <!-- ${text} -->
+          </div>
+        </li>
+      `;
+    }
+
+    function createBootstrapCarouselItem(src, text, index) {
+      return `
+        <div class="carousel-item ${index === 0 ? 'active' : ''}">
+          <div class="iframe-container">
+            <img src="${src}" loading="lazy" alt="Imagen del carousel ${index + 1}">
+          </div>
+          <div class="carousel-caption d-none d-md-block">
+            <p>${text}</p>
+          </div>
+        </div>
+      `;
+    }
+
+    function populateInfiniteCarousel() {
+      const carousel = document.querySelector('.carousel');
+      carouselItems.forEach(item => {
+        carousel.innerHTML += createInfiniteCarouselItem(item.src, item.text);
+      });
+    }
+
+    function populateBootstrapCarousel() {
+      const carouselInner = document.querySelector('.carousel-inner');
+      const carouselIndicators = document.querySelector('.carousel-indicators');
+
+      carouselItems2.forEach((item, index) => {
+        carouselInner.innerHTML += createBootstrapCarouselItem(item.src, item.text, index);
+        carouselIndicators.innerHTML += `
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="${index}" class="${index === 0 ? 'active' : ''}" aria-current="${index === 0 ? 'true' : 'false'}" aria-label="Slide ${index + 1}"></button>
+        `;
+      });
+    }
+
+    function handleLeftClick() {
+      const carousel = document.querySelector('.carousel');
+      const firstCardWidth = carousel.querySelector('.card').offsetWidth;
+      carousel.scrollTo({
+        left: carousel.scrollLeft - firstCardWidth,
+        behavior: 'smooth'
+      });
+    }
+
+    function handleRightClick() {
+      const carousel = document.querySelector('.carousel');
+      const firstCardWidth = carousel.querySelector('.card').offsetWidth;
+      carousel.scrollTo({
+        left: carousel.scrollLeft + firstCardWidth,
+        behavior: 'smooth'
+      });
+    }
+
+    function setupInfiniteCarousel() {
+      const carousel = document.querySelector('.carousel');
+      const firstCardWidth = carousel.querySelector('.card').offsetWidth;
+      const carouselChildren = [...carousel.children];
+      const leftButton = document.getElementById('left');
+      const rightButton = document.getElementById('right');
+
+      let isDragging = false, startX, startScrollLeft;
+      
+      const handleDragStart = (e) => {
+        isDragging = true;
+        startX = e.pageX || e.touches[0].pageX;
+        startScrollLeft = carousel.scrollLeft;
+      };
+
+      const handleDragging = (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX || e.touches[0].pageX;
+        const distance = x - startX;
+        carousel.scrollLeft = startScrollLeft - distance;
+      };
+
+      const handleDragStop = () => {
+        isDragging = false;
+      };
+
+      const infiniteScroll = () => {
+        if (carousel.scrollLeft === 0) {
+          carousel.classList.add('no-transition');
+          carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+          carousel.classList.remove('no-transition');
+        } else if (Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+          carousel.classList.add('no-transition');
+          carousel.scrollLeft = carousel.offsetWidth;
+          carousel.classList.remove('no-transition');
+        }
+      };
+
+      carousel.addEventListener('mousedown', handleDragStart);
+      carousel.addEventListener('touchstart', handleDragStart);
+      document.addEventListener('mousemove', handleDragging);
+      carousel.addEventListener('touchmove', handleDragging);
+      document.addEventListener('mouseup', handleDragStop);
+      carousel.addEventListener('touchend', handleDragStop);
+      carousel.addEventListener('scroll', infiniteScroll);
+
+      // Añadir event listeners para los botones de navegación
+      leftButton.addEventListener('click', handleLeftClick);
+      rightButton.addEventListener('click', handleRightClick);
+
+      carouselChildren.slice(-1).forEach(card => {
+        carousel.insertAdjacentHTML('afterbegin', card.outerHTML);
+      });
+
+      carouselChildren.slice(0, 1).forEach(card => {
+        carousel.insertAdjacentHTML('beforeend', card.outerHTML);
+      });
+    }
+
+    function lazyLoadIframes() {
+      const iframeContainers = document.querySelectorAll('.iframe-container[data-src]');
+      
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const container = entry.target;
+            const src = container.getAttribute('data-src');
+            container.innerHTML = `<iframe src="${src}" frameborder="0" scrolling="no" allowtransparency="true"></iframe>`;
+            container.removeAttribute('data-src');
+            observer.unobserve(container);
+          }
+        });
+      }, options);
+
+      iframeContainers.forEach(container => {
+        observer.observe(container);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      populateInfiniteCarousel();
+      populateBootstrapCarousel();
+      setupInfiniteCarousel();
+      lazyLoadIframes();
+    });
+  </script>
 </body>
 
 </html>

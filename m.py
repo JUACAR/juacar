@@ -31,8 +31,8 @@ def resize_images(input_dir, output_dir):
 
 if __name__ == "__main__":
     # Especificar directorio de entrada y salida
-    input_directory = 'D:/Me/Projects/juacar/img/juacar-2023/talleres'
-    output_directory = 'D:/Me/Projects/juacar/img/juacar-2023'
+    input_directory = 'D:/Me/Projects/juacar/img/juacar-2024'
+    output_directory = 'D:/Me/Projects/juacar/img/juacar-2024'
 
     # Llamar a la función para redimensionar las imágenes
     resize_images(input_directory, output_directory)

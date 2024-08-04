@@ -1,7 +1,7 @@
 import os
 import json
 
-directorio = 'D:/Me/Projects/juacar/img/juacar-2023/directora'  # Reemplaza con la ruta de tu directorio
+directorio = 'D:/Me/Projects/juacar/img/juacar-2024'  # Reemplaza con la ruta de tu directorio
 archivo_json = 'nombres_archivos.json'  # Nombre del archivo JSON
 
 # Obtén la lista de archivos en el directorio
@@ -11,7 +11,7 @@ archivos = os.listdir(directorio)
 archivos.sort()
 
 # Crea una lista con los nombres de los archivos
-nombres_archivos = [archivo for archivo in archivos]
+nombres_archivos = [ " {src: " + f"'./img/juacar-2024/{archivo}'" + ", text: 'Prueba millll'}" for archivo in archivos]
 
 # Crea un diccionario con el formato deseado
 data = {"archivos": nombres_archivos}
